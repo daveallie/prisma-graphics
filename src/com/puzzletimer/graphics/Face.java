@@ -1,7 +1,6 @@
 package com.puzzletimer.graphics;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Face {
     public final Vector3[] vertices;
@@ -28,6 +27,7 @@ public class Face {
             Vector3 v = arrayOfVector3[i];
             sum = sum.add(v);
         }
+
         return sum.mul(1.0D / this.vertices.length);
     }
 
@@ -36,6 +36,7 @@ public class Face {
         for (int i = 0; i < vertices.length; i++) {
             vertices[i] = matrix.mul(this.vertices[i]);
         }
+
         return setVertices(vertices);
     }
 
@@ -47,11 +48,12 @@ public class Face {
             Vector3 d = this.vertices[i].sub(centroid).unit();
             vertices[i] = this.vertices[i].sub(d.mul(length));
         }
+
         return setVertices(vertices);
     }
 
     public Face soften(double length) {
-        List<Vector3> vertices = new ArrayList<>();
+        ArrayList<Vector3> vertices = new ArrayList();
         for (int i = 0; i < this.vertices.length; i++) {
             Vector3 v1 = this.vertices[i];
             Vector3 v2 = this.vertices[((i + 1) % this.vertices.length)];
@@ -63,6 +65,7 @@ public class Face {
                 vertices.add(v1.add(v2).mul(0.5D));
             }
         }
+
         Vector3[] verticesArray = new Vector3[vertices.size()];
         vertices.toArray(verticesArray);
 
@@ -100,7 +103,7 @@ public class Face {
             return this;
         }
 
-        List<Vector3> vertices = new ArrayList<>();
+        ArrayList<Vector3> vertices = new ArrayList();
         for (int i = 0; i < this.vertices.length; i++) {
             Vector3 v1 = this.vertices[i];
             Vector3 v2 = this.vertices[((i + 1) % this.vertices.length)];

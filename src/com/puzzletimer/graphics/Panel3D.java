@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Panel3D
         extends JPanel implements MouseListener, MouseMotionListener, MouseWheelListener {
@@ -77,10 +78,16 @@ public class Panel3D
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 
-        Face[] faces = Arrays.copyOf(this.mesh.faces, this.mesh.faces.length);
-        Arrays.sort(faces, (f1, f2) -> Double.compare(
-                f2.centroid().z,
-                f1.centroid().z));
+        Face[] faces = (Face[]) Arrays.copyOf(this.mesh.faces, this.mesh.faces.length);
+        Arrays.sort(faces, new Comparator<Face>() {
+            public int compare(Face f1, Face f2) {
+                return Double.compare(
+                        f2.centroid().z,
+                        f1.centroid().z);
+            }
+
+
+        });
         Face[] pFaces = new Face[faces.length];
         for (int i = 0; i < pFaces.length; i++) {
             Vector3[] vertices = new Vector3[faces[i].vertices.length];
