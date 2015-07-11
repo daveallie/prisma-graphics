@@ -1,6 +1,8 @@
 package com.puzzletimer.graphics;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Mesh {
     public final Face[] faces;
@@ -51,9 +53,9 @@ public class Mesh {
     }
 
     public Mesh clip(Plane plane) {
-        java.util.ArrayList<Face> faces = new java.util.ArrayList();
-        for (int i = 0; i < this.faces.length; i++) {
-            Face face = this.faces[i].clip(plane);
+        List<Face> faces = new ArrayList<>();
+        for (Face face1 : this.faces) {
+            Face face = face1.clip(plane);
             if (face.vertices.length > 0) {
                 faces.add(face);
             }
@@ -76,13 +78,13 @@ public class Mesh {
         Face[] faces = new Face[this.faces.length + mesh.faces.length];
         int next = 0;
 
-        for (int i = 0; i < this.faces.length; i++) {
-            faces[next] = this.faces[i];
+        for (Face face : this.faces) {
+            faces[next] = face;
             next++;
         }
 
-        for (int i = 0; i < mesh.faces.length; i++) {
-            faces[next] = mesh.faces[i];
+        for (Face face : mesh.faces) {
+            faces[next] = face;
             next++;
         }
 
