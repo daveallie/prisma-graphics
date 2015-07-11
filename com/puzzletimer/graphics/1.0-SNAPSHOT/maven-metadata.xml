@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
-  <groupId>com.puzzletimer.graphics</groupId>
-  <artifactId>prisma-graphics</artifactId>
+  <groupId>com.puzzletimer</groupId>
+  <artifactId>graphics</artifactId>
   <version>1.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20150711.052330</timestamp>
+      <timestamp>20150711.052458</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20150711052330</lastUpdated>
+    <lastUpdated>20150711052458</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.0-20150711.052330-1</value>
-        <updated>20150711052330</updated>
+        <value>1.0-20150711.052458-1</value>
+        <updated>20150711052458</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-20150711.052330-1</value>
-        <updated>20150711052330</updated>
+        <value>1.0-20150711.052458-1</value>
+        <updated>20150711052458</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

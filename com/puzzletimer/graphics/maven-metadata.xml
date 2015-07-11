@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>com.puzzletimer.graphics</groupId>
-  <artifactId>prisma-graphics</artifactId>
+  <groupId>com.puzzletimer</groupId>
+  <artifactId>graphics</artifactId>
   <versioning>
     <versions>
       <version>1.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20150711052330</lastUpdated>
+    <lastUpdated>20150711052458</lastUpdated>
   </versioning>
 </metadata>
