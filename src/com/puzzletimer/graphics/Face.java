@@ -53,7 +53,7 @@ public class Face {
     }
 
     public Face soften(double length) {
-        ArrayList<Vector3> vertices = new ArrayList();
+        ArrayList<Vector3> vertices = new ArrayList<Vector3>();
         for (int i = 0; i < this.vertices.length; i++) {
             Vector3 v1 = this.vertices[i];
             Vector3 v2 = this.vertices[((i + 1) % this.vertices.length)];
@@ -103,7 +103,7 @@ public class Face {
             return this;
         }
 
-        ArrayList<Vector3> vertices = new ArrayList();
+        ArrayList<Vector3> vertices = new ArrayList<Vector3>();
         for (int i = 0; i < this.vertices.length; i++) {
             Vector3 v1 = this.vertices[i];
             Vector3 v2 = this.vertices[((i + 1) % this.vertices.length)];

@@ -78,7 +78,7 @@ public class Panel3D
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 
-        Face[] faces = (Face[]) Arrays.copyOf(this.mesh.faces, this.mesh.faces.length);
+        Face[] faces = Arrays.copyOf(this.mesh.faces, this.mesh.faces.length);
         Arrays.sort(faces, new Comparator<Face>() {
             public int compare(Face f1, Face f2) {
                 return Double.compare(
