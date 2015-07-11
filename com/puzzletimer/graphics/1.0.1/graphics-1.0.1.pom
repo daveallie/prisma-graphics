@@ -10,6 +10,7 @@
     </properties>
 
     <build>
+        <sourceDirectory>${project.basedir}/src</sourceDirectory>
         <plugins>
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
